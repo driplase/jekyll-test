@@ -1,0 +1,53 @@
+---
+permalink: /test
+layout: page
+---
+
+<style>
+  @keyframes spin {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(-1turn);
+    }
+  }
+
+  .spin {
+    animation: spin 5s linear 0s infinite;
+  }
+
+  .spin-reverse {
+    animation: spin-reverse 5s linear 0s infinite;
+  }
+</style>
+
+<div class="container">
+  so basically Jekyll isn't only a blog tool at all?<br>
+  can i spin this page with jekyll?<br>
+  <button
+    type="button"
+    onclick="spin()"
+  >tHat'S AWeSoMe</button>
+</div>
+
+<script>
+  let isSpinning = 0;
+  function spin() {
+    isSpinning = (isSpinning + 1) % 4;
+
+    document.documentElement.classList.remove('spin');
+    document.documentElement.classList.remove('spin-reverse');
+    if (isSpinning === 1) document.documentElement.classList.add('spin');
+    if (isSpinning === 3) document.documentElement.classList.add('spin-reverse');
+  }
+</script>
