@@ -1,0 +1,15 @@
+{
+	"Jekyll Post Template": {
+			"prefix": "jkylp",
+			"body": [
+					"---",
+					"layout: post",
+					"title: ${1:Post Title}",
+					"date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+					"---",
+					"",
+					"${2:Post Content}"
+			],
+			"description": "Jekyll post template with timestamp"
+	}
+}
